@@ -2,7 +2,7 @@
 A collection of short scripts that do useful stuff for bioinformatics and biodiversity informatics.
 
 ## Convert .fasta to .csv
-Python script to be run directly in the shell. Adds column headers 'id' and 'sequence'. Replace ',' by '\t' to obtain a tab-delimited file.
+Python script to be run directly in the shell. It adds column headers 'id' and 'sequence'. Replace ',' by '\t' to obtain a tab-delimited file.
 
 ```
 fasta_to_csv () {
