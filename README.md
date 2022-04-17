@@ -37,8 +37,8 @@ Python script to be run directly in the shell.
 ```
 csv_to_fasta () {
     PYCMD=$(cat <<EOF
-csv = 'input_clusters.csv'
-output = 'output_clusters.fasta'
+csv = 'input.csv'
+output = 'output.fasta'
 
 out_lines = []
 temp_line = ''
