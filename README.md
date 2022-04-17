@@ -1,5 +1,6 @@
 # useful_short_scripts
 A collection of short scripts that do useful stuff for bioinformatics and biodiversity informatics.
+Usage: copy and paste script in (Linux) terminal, rename input and output file names and hit enter.
 
 ## Convert .fasta to .csv
 Python script to be run directly in the shell. It adds column headers 'id' and 'sequence'. Replace ',' by '\t' to obtain a tab-delimited file.
