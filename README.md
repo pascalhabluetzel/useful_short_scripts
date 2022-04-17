@@ -60,8 +60,21 @@ EOF
 csv_to_fasta
 ```
 
-## Convert .fastq to fasta
+## Convert .fastq to .fasta
 
 ```
 sed -n '1~4s/^@/>/p;2~4p' input.fastq > output.fasta
+```
+
+## Reverse complement sequences in a .fasta file
+Only works for sequences that do not contain gaps (-).
+
+```
+while read line; do
+    if [[ $line =~ ">" ]]; then
+        echo "$line"
+    else
+        echo $line | tr ACGTRYSWKMBDHVNacgtryswkmbdhvn TGCAYRWSMKVHDBNtgcayrwsmkvhdbn | rev
+    fi
+done < input.fasta > output.fasta
 ```
