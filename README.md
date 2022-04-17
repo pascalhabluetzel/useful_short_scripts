@@ -59,3 +59,9 @@ EOF
 }
 csv_to_fasta
 ```
+
+## Convert .fastq to fasta
+
+```
+sed -n '1~4s/^@/>/p;2~4p' input.fastq > output.fasta
+```
