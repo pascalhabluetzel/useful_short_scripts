@@ -73,7 +73,7 @@ Only works for sequences that do not contain gaps (-).
 ```
 while read line; do
     if [[ $line =~ ">" ]]; then
-        echo "$line"
+        echo $line
     else
         echo $line | tr ACGTRYSWKMBDHVNacgtryswkmbdhvn TGCAYRWSMKVHDBNtgcayrwsmkvhdbn | rev
     fi
