@@ -79,3 +79,25 @@ while read line; do
     fi
 done < input.fasta > output.fasta
 ```
+
+## Merge two tables by common column
+```
+merge_tables () {
+    PYCMD=$(cat <<EOF
+
+import pandas as pd
+
+df_table1 = pd.read_csv("table1.csv", sep=',')
+df_table2 = pd.read_csv("table2.csv", sep=',')
+
+combined = pd.merge(df_table1, df_table2, on=['common_column_name'])
+
+combined.to_csv("output.csv", sep=',')
+
+EOF
+    )
+
+    python3 -c "$PYCMD"
+}
+merge_tables
+```
